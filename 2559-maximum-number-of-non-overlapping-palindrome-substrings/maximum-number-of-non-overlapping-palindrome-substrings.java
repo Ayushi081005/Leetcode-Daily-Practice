@@ -14,7 +14,7 @@ class Solution {
                 continue;
             }
             left = i - k / 2;
-            right = i + k / 2 + (k % 2 == 0 ? 0 : 1);
+            right = i + (k + 1) / 2;
 
             if (left > End && isValidPalindrome(s, left, right)) {
                 count++;
