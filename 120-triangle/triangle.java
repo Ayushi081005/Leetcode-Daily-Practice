@@ -1,7 +1,7 @@
 class Solution {
     public int minimumTotal(List<List<Integer>> triangle) {
         int n = triangle.size();
-        // Initialize dp array with the bottom row values
+       
         int[] dp = new int[n];
         for (int j = 0; j < n; j++) {
             dp[j] = triangle.get(n - 1).get(j);
