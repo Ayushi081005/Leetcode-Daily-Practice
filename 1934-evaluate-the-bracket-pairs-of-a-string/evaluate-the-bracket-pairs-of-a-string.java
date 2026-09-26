@@ -1,6 +1,5 @@
 class Solution {
     public String evaluate(String s, List<List<String>> knowledge) {
-        
         Map<String, String> map = new HashMap<>();
         for (List<String> pair : knowledge) {
             map.put(pair.get(0), pair.get(1));
@@ -19,7 +18,12 @@ class Solution {
             } else if (c == ')') {
                 inBracket = false;
                 
-                result.append(map.getOrDefault(key.toString(), "?"));
+                String val = map.get(key.toString());
+                if (val != null) {
+                    result.append(val);
+                } else {
+                    result.append("?");
+                }
             } else {
                 if (inBracket) {
                     key.append(c);
