@@ -24,7 +24,6 @@ class Solution {
 
         int totalSum = 0;
 
-        // Check only divisors of n
         for (int k = 1; k <= n / k; k++) {
             if (n % k != 0) {
                 continue;
