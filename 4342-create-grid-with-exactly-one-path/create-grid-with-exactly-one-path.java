@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 class Solution {
     public String[] createGrid(int m, int n) {
         char[][] grid = new char[m][n];
